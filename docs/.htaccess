@@ -1,0 +1,13 @@
+# RewriteBase /
+RewriteEngine On
+
+AddType application/rdf+xml .rdf
+AddType text/turtle .ttl
+
+RewriteCond %{HTTP_ACCEPT} application/rdf+xml
+RewriteRule ^vocab$  vocab.rdf [L]
+
+RewriteCond %{HTTP_ACCEPT} text/turtle
+RewriteRule ^vocab$  vocab.ttl [L]
+
+
