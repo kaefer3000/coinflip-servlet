@@ -11,7 +11,8 @@
     xmlns:dc="http://purl.org/dc/elements/1.1/"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
     lang="en"
-    xml:lang="en">
+    xml:lang="en"
+    xml:base="vocab">
   <head>
     <title>Flipping Coin Ontology</title>
   </head>
@@ -24,7 +25,7 @@
       Can also be read using your favourite <a href="https://rdfa.info/">RDFa</a> reader.
     </p>
 
-
+    <h2>Terms</h2>
     <div resource="#shows">
       A <a href="#Coin" typeof="rdfs:Class" property="rdfs:domain"><em property="rdfs:label">Coin</em></a>
       typically <a href="#shows"><em property="rdfs:label">shows</em></a>
@@ -34,10 +35,10 @@
 
     <ul>
       <li>
-        <a about="#Heads" typeof="this:CoinFace"><em property="rdfs:label">Heads</em></a>
+        <a href="#Heads" typeof="this:CoinFace"><em property="rdfs:label">Heads</em></a>
       </li>
       <li>
-        <a about="#Tails" typeof="this:CoinFace"><em property="rdfs:label">Tails</em></a>
+        <a href="#Tails" typeof="this:CoinFace"><em property="rdfs:label">Tails</em></a>
       </li>
     </ul>
 
