@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.1//EN"
+    "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-2.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+    version="XHTML+RDFa 1.1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.w3.org/1999/xhtml
+                        http://www.w3.org/MarkUp/SCHEMA/xhtml-rdfa-2.xsd"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:this="#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    lang="en"
+    xml:lang="en">
+  <head>
+    <title>Flipping Coin Ontology</title>
+  </head>
+  <body>
+
+    <h1 about="" typeof="owl:Ontology" property="rdfs:label dc:title">The Flipping Coin Ontology</h1>
+
+    <p>
+      Here, we present the terms of our flipping coin ontology.
+      Can also be read using your favourite <a href="https://rdfa.info/">RDFa</a> reader.
+    </p>
+
+
+    <div resource="#shows">
+      A <a href="#Coin" typeof="rdfs:Class" property="rdfs:domain"><em property="rdfs:label">Coin</em></a>
+      typically <a href="#shows"><em property="rdfs:label">shows</em></a>
+      one of two <a href="#CoinFace" property="rdfs:range" typeof="rdfs:Class">
+      <em property="rdfs:label">Coin Face</em></a>s:
+    </div>
+
+    <ul>
+      <li>
+        <a about="#Heads" typeof="this:CoinFace"><em property="rdfs:label">Heads</em></a>
+      </li>
+      <li>
+        <a about="#Tails" typeof="this:CoinFace"><em property="rdfs:label">Tails</em></a>
+      </li>
+    </ul>
+
+  </body>
+
+</html>
