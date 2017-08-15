@@ -1,0 +1,7 @@
+URI: vocab
+
+URI: vocab.ttl
+Content-type: text/turtle
+
+URI: vocab.rdf
+Content-type: application/rdf+xml
