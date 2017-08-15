@@ -6,9 +6,6 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.w3.org/1999/xhtml
                         http://www.w3.org/MarkUp/SCHEMA/xhtml-rdfa-2.xsd"
-    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-    xmlns:vocab="vocab#"
-    xmlns:owl="http://www.w3.org/2002/07/owl#"
     lang="en"
     xml:lang="en">
   <head>
@@ -16,7 +13,9 @@
   </head>
   <body>
 
-    <h1 about="" typeof="owl:Ontology" property="rdfs:label dc:title">The Flipping Coin Ontology</h1>
+    <!-- Note that rdf, rdfs, owl, dc are well-known prefixes, see https://www.w3.org/2011/rdfa-context/rdfa-1.1 -->
+
+    <h1 about="vocab" typeof="owl:Ontology" property="rdfs:label dc:title">The Flipping Coin Ontology</h1>
 
     <p>
       Here, we present the terms of our flipping coin ontology.
@@ -31,7 +30,7 @@
       <em property="rdfs:label">Coin Face</em></a>s:
     </div>
 
-    <ul>
+    <ul prefix="vocab: vocab#"> <!-- otherwise the relative URI in typeof does not work -->
       <li>
         <a href="vocab#Heads" typeof="vocab:CoinFace"><em property="rdfs:label">Heads</em></a>
       </li>
