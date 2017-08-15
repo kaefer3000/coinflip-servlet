@@ -7,15 +7,13 @@
     xsi:schemaLocation="http://www.w3.org/1999/xhtml
                         http://www.w3.org/MarkUp/SCHEMA/xhtml-rdfa-2.xsd"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-    xmlns:this="#"
+    xmlns:vocab="vocab#"
     xmlns:dc="http://purl.org/dc/elements/1.1/"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
     lang="en"
-    xml:lang="en"
-    xml:base="vocab">
+    xml:lang="en">
   <head>
     <title>Flipping Coin Ontology</title>
-    <base href="vocab" />
   </head>
   <body>
 
@@ -27,19 +25,19 @@
     </p>
 
     <h2>Terms</h2>
-    <div resource="#shows">
-      A <a href="#Coin" typeof="rdfs:Class" property="rdfs:domain"><em property="rdfs:label">Coin</em></a>
-      typically <a href="#shows"><em property="rdfs:label">shows</em></a>
-      one of two <a href="#CoinFace" property="rdfs:range" typeof="rdfs:Class">
+    <div resource="vocab:shows">
+      A <a href="vocab:Coin" typeof="rdfs:Class" property="rdfs:domain"><em property="rdfs:label">Coin</em></a>
+      typically <a href="vocab:shows"><em property="rdfs:label">shows</em></a>
+      one of two <a href="vocab:CoinFace" property="rdfs:range" typeof="rdfs:Class">
       <em property="rdfs:label">Coin Face</em></a>s:
     </div>
 
     <ul>
       <li>
-        <a href="#Heads" typeof="this:CoinFace"><em property="rdfs:label">Heads</em></a>
+        <a href="vocab:Heads" typeof="vocab:CoinFace"><em property="rdfs:label">Heads</em></a>
       </li>
       <li>
-        <a href="#Tails" typeof="this:CoinFace"><em property="rdfs:label">Tails</em></a>
+        <a href="vocab:Tails" typeof="vocab:CoinFace"><em property="rdfs:label">Tails</em></a>
       </li>
     </ul>
 
