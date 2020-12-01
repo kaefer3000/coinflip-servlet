@@ -4,16 +4,17 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>edu.kit.aifb.ls3</groupId>
 	<artifactId>coinflip-servlet</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.3-SNAPSHOT</version>
 
 	<packaging>war</packaging>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.target>1.7</maven.compiler.target>
-		<maven.compiler.source>1.7</maven.compiler.source>
-		<jetty.version>9.4.6.v20170531</jetty.version>
-		<nxparser.version>3.0.0-SNAPSHOT</nxparser.version>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<jetty.version>11.0.0.beta3</jetty.version>
+		<nxparser.version>4.0.0</nxparser.version>
+		<jersey.version>3.0.0-RC2</jersey.version>
 	</properties>
 
 	<scm>
@@ -29,15 +30,20 @@
 			<version>1.7.12</version>
 		</dependency>
 		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
-			<version>3.1.0</version>
+			<groupId>jakarta.servlet</groupId>
+			<artifactId>jakarta.servlet-api</artifactId>
+			<version>5.0.0</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.glassfish.jersey.containers</groupId>
 			<artifactId>jersey-container-servlet</artifactId>
-			<version>2.17</version>
+			<version>${jersey.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.inject</groupId>
+			<artifactId>jersey-hk2</artifactId>
+			<version>${jersey.version}</version>
 		</dependency>
 		<dependency>
 			<!-- only for its CORS filter: -->
@@ -108,7 +114,7 @@
 				<configuration>
 					<scanIntervalSeconds>3</scanIntervalSeconds>
 					<!-- To log HTTP requests on INFO level: -->
-					<requestLog implementation="org.eclipse.jetty.server.Slf4jRequestLog"></requestLog>
+					<requestLog implementation="org.eclipse.jetty.server.CustomRequestLog"></requestLog>
 				</configuration>
 				<dependencies>
 					<!-- Such that above logging works: -->
